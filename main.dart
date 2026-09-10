@@ -41,4 +41,20 @@ class Passagem {
     this.atendente = atendente;
     this.observacoes = observacoes;
   }
+
+  Passagem.codigoEPassageiro({String? codigoLocalizador, this.passageiro}) {
+    _codigoLocalizador = codigoLocalizador;
+  }
+
+  Passagem.all(String codigoLocalizador,
+      {required Passageiro? passageiro,
+      required PlataformaVenda? plataforma,
+      required Atendente? atendente,
+      String? observacoes}) {
+    _codigoLocalizador = codigoLocalizador;
+    this.passageiro = passageiro;
+    this.plataforma = plataforma;
+    this.atendente = atendente;
+    this.observacoes = observacoes;
+  }
 }
