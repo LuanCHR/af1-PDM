@@ -28,4 +28,17 @@ class Passagem {
   String? observacoes;
 
   Passagem() {}
+
+  Passagem.somenteCodigo(String codigoLocalizador) {
+    _codigoLocalizador = codigoLocalizador;
+  }
+
+  Passagem.completa(String codigoLocalizador, Passageiro? passageiro,
+      PlataformaVenda? plataforma, Atendente? atendente, String? observacoes) {
+    _codigoLocalizador = codigoLocalizador;
+    this.passageiro = passageiro;
+    this.plataforma = plataforma;
+    this.atendente = atendente;
+    this.observacoes = observacoes;
+  }
 }
