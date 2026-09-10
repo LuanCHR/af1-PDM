@@ -19,3 +19,13 @@ class Atendente {
   String? celular;
   double? salario;
 }
+
+class Passagem {
+  String? _codigoLocalizador = '';
+  Passageiro? passageiro;
+  PlataformaVenda? plataforma;
+  Atendente? atendente;
+  String? observacoes;
+
+  Passagem() {}
+}
