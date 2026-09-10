@@ -57,4 +57,16 @@ class Passagem {
     this.atendente = atendente;
     this.observacoes = observacoes;
   }
+
+  String? getCodigoLocalizador() {
+    return _codigoLocalizador;
+  }
+
+  void setCodigoLocalizador(String? codigoLocalizador) {
+    if (codigoLocalizador == null || codigoLocalizador.isEmpty) {
+      print('Código localizador de passagem inválido!');
+      return;
+    }
+    _codigoLocalizador = codigoLocalizador;
+  }
 }
