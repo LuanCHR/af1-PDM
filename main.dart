@@ -99,7 +99,19 @@ class Passagem {
   }
 }
 
-class PassagemPrimeiraClasse extends Passagem {
+mixin Logger {
+  void log(String mensagem) {
+    print(mensagem);
+  }
+}
+
+mixin Auditoria {
+  void auditar(String mensagem) {
+    print('[Auditoria]: $mensagem');
+  }
+}
+
+class PassagemPrimeiraClasse extends Passagem with Logger, Auditoria {
   String? loungeAcesso;
 
   PassagemPrimeiraClasse(String codigoLocalizador,
