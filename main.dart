@@ -79,4 +79,38 @@ class Passagem {
     }
     _codigoLocalizador = valor;
   }
+
+  void EmitirPassagem() {
+    print('Passagem emitida com sucesso!');
+  }
+
+  bool CancelarPassagem() {
+    print('Passagem cancelada com sucesso!');
+    return true;
+  }
+
+  void AtualizarPassagem() {
+    print('Passagem atualizada com sucesso!');
+  }
+
+  Passagem ConsultarPassagem(String codigo) {
+    print('Passagem consultada com sucesso!');
+    return Passagem();
+  }
+}
+
+class PassagemPrimeiraClasse extends Passagem {
+  String? loungeAcesso;
+
+  PassagemPrimeiraClasse(String codigoLocalizador,
+      {required Passageiro? passageiro,
+      required PlataformaVenda? plataforma,
+      required Atendente? atendente,
+      String? observacoes,
+      required this.loungeAcesso})
+      : super.all(codigoLocalizador,
+            passageiro: passageiro,
+            plataforma: plataforma,
+            atendente: atendente,
+            observacoes: observacoes);
 }
