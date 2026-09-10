@@ -69,4 +69,14 @@ class Passagem {
     }
     _codigoLocalizador = codigoLocalizador;
   }
+
+  String? get codigoLocalizador => _codigoLocalizador;
+
+  set codigoLocalizador(String? valor) {
+    if (valor == null || valor.isEmpty) {
+      print('Código localizador de passagem inválido!');
+      return;
+    }
+    _codigoLocalizador = valor;
+  }
 }
